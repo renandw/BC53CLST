@@ -2,13 +2,13 @@ esptool.py -p /dev/ttyUSB0 --baud 115200 write_flash -fs 8m -fm dout -ff 40m 0x0
 
 
 ```
-openssl sha384 -binary -out firmware/BS53WCST.bin.sig firmware/BS53WCST.bin
-printf "%08x" `cat firmware/BS53WCST.bin | wc -c`| xxd -r -p >>firmware/BS53WCST.bin.sig
+openssl sha384 -binary -out firmware/BS53CLST.bin.sig firmware/BS53CLST.bin
+printf "%08x" `cat firmware/BS53CLST.bin | wc -c`| xxd -r -p >>firmware/BS53CLST.bin.sig
 
 
 
-openssl sha384 -binary -out firmware/BS53WCST.bin.sig firmware/BS53WCST.bin
-printf "%08x" `cat firmware/BS53WCST.bin | wc -c`| xxd -r -p >>firmware/BS53WCST.bin.sig
+openssl sha384 -binary -out firmware/BS53CLST.bin.sig firmware/BS53CLST.bin
+printf "%08x" `cat firmware/BS53CLST.bin | wc -c`| xxd -r -p >>firmware/BS53CLST.bin.sig
 
-cp BS53WCST.bin /media/sf_Shared-Homekit-Files
-cp BS53WCST.bin.sig /media/sf_Shared-Homekit-Files
+cp BS53CLST.bin /media/sf_Shared-Homekit-Files
+cp BS53CLST.bin.sig /media/sf_Shared-Homekit-Files
